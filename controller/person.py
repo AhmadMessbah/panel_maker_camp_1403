@@ -1,21 +1,32 @@
 import tkinter as tk
 from person_info import *
 
-def submit():
+
+def add():
     id = id_entry.get()
     name = name_entry.get()
-    #if name_validator(name) == False:
-        #print("invalid name")
     family = family_entry.get()
-   # if family_validator(family) == False:
-       # print("invalid family")
     company = company_entry.get()
-   # if company_validator(company) == False:
-        #print("invalid company")
-    print("Id: ",id)
-    print("name: ",name)
-    print("family: ",family)
-    print("company: ",company)
+    print("Added:")
+    print("Id: ", id)
+    print("name: ", name)
+    print("family: ", family)
+    print("company: ", company)
+
+
+def delete():
+    id_entry.delete(0, tk.END)
+    name_entry.delete(0, tk.END)
+    family_entry.delete(0, tk.END)
+    company_entry.delete(0, tk.END)
+
+
+def edit():
+    id_entry.delete(0, tk.END)
+    name_entry.delete(0, tk.END)
+    family_entry.delete(0, tk.END)
+    company_entry.delete(0, tk.END)
+
 
 window = tk.Tk()
 window.title("Information Form")
@@ -40,6 +51,12 @@ company_button.grid(row=3, column=0, padx=5, pady=5)
 company_entry = tk.Entry(window)
 company_entry.grid(row=3, column=1, padx=5, pady=5)
 
-submit_button = tk.Button(window, text="Submit", command=submit)
-submit_button.grid(row=5, column=5, padx=5, pady=5)
+edit_button = tk.Button(window, text="Edit", command=add)
+edit_button.grid(row=5, column=5, padx=5, pady=5)
+
+delete_button = tk.Button(window, text="Delete", command=delete)
+delete_button.grid(row=5, column=4, padx=4, pady=4)
+
+add_button = tk.Button(window, text="Add", command=edit)
+add_button.grid(row=5, column=3, padx=3, pady=3)
 window.mainloop()
