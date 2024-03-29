@@ -1,5 +1,17 @@
 import tkinter as tk
 
+
+def submit():
+    id = id_entry.get()
+    name = name_entry.get()
+    family = family_entry.get()
+    company = company_entry.get()
+    print("ID: ", id)
+    print("Name: ", name)
+    print("Family: ", family)
+    print("Company: ", company)
+
+
 window = tk.Tk()
 window.title("Information Form")
 # ID
@@ -23,6 +35,6 @@ company_button.grid(row=3, column=0, padx=5, pady=5)
 company_entry = tk.Entry(window)
 company_entry.grid(row=3, column=1, padx=5, pady=5)
 
-submit_button = tk.Button(window, text="Submit", command = submit)
-submit_button.grid(row=4, column=0, padx=5 , pady = 5)
+submit_button = tk.Button(window, text="Submit", command=submit)
+submit_button.grid(row=5, column=5, padx=5, pady=5)
 window.mainloop()
