@@ -1,4 +1,4 @@
-from tikinter import *
+from tkinter import *
 from validator import *
 
 def submit():
@@ -16,6 +16,3 @@ def submit():
     print("name: ",name)
     print("family: ",family)
     print("company: ",company)
-
-
-print(1)
