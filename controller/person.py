@@ -1,16 +1,6 @@
-import tkinter as tk
+from person_info import *
 
-
-def submit():
-    id = id_entry.get()
-    name = name_entry.get()
-    family = family_entry.get()
-    company = company_entry.get()
-    print("ID: ", id)
-    print("Name: ", name)
-    print("Family: ", family)
-    print("Company: ", company)
-
+submit()
 
 window = tk.Tk()
 window.title("Information Form")
